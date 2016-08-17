@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>alm958 adding users jQuery</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles/alm958_160815_adding_users_jQuery.css">
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script>
+            function adduser(){
+                $('tbody').append('<tr><td>' + $('#firstname').val()+'</td><td>'+$('#lasttname').val()+'</td><td>'+$('#email').val()+'</td><td>'+$('#phone').val()+'</td></tr>')
+            };
+
+            $(document).ready(function(){
+                $('#submit').click(function(){
+                        adduser();
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="table">
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Contact #</th>
+                </tr>
+            </table>
+        </div>
+        <div id="form">
+            <h1>Add User</h1>
+            <hr>
+            <form action="">
+                <span>First Name: <input id="firstname" type="text" value="First Name"></span>
+                <span>Last Name: <input id="lasttname" type="text" value="Last Name"></span>
+                <span>Email Address: <input id="email" type="text" value="Email Address"></span>
+                <span>Contact No.: <input id="phone" type="text" value="Phone #"></span>
+                <span><input id="submit" type="submit" value="Add user"></span>
+            </form>
+
+        </div>
+    </body>
+
+</html>
